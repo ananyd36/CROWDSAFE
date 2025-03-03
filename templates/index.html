@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<style>
+  .text{
+    font-size: 40px;
+    }
+  
+</style>
+<center>
+  <div class="text">
+    Major Project 2021
+  </div>
+</center>
+<center>
+  <hr>
+  <strong><p>
+    Image Detection
+    </p>
+  </strong>
+    <p>Upload an masked or unmasked image to see object detection
+    <div class="upload-form">
+      <form action = "/images" method = "POST" 
+        enctype = "multipart/form-data">
+        <label for="myfile">Select an Image</label>
+        <input type = "file" id="myfile" name = "myfile" />
+        <input type = "submit"/>
+      </form>
+    </div>
+</center> 
+<center>
+  <hr>
+  <strong><p>Video Detection</p></strong>
+  <p>Upload an masked or unmasked video to see object detection!
+  <div class="upload-form">
+    <form action = "/videos" method = "POST" 
+      enctype = "multipart/form-data">
+      <label for="myfile">Select an Image</label>
+      <input type = "file" name = "myvideos" />
+      <input type = "submit"/>
+    </form>
+  </div>
+</center> 
+<center>
+  <hr>
+  <strong><p>Real Time Detection</p></strong>
+  <p>Click the button to start Object Detection!
+  <div class="upload-form">
+    <form action = "/camera" method = "POST">
+      <input type = "submit" value="Start"/>
+    </form>
+  </div>
+  <hr>
+</center> 
+
+{% endblock %}
